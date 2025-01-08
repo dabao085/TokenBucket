@@ -9,7 +9,7 @@
 int main(int arv, char *argv[]) {
 
   {
-    TokenBucket tb(350, 1050);
+    TokenBucket<> tb(350, 1050);
 
     assert(tb.consume(1050));
     assert(!tb.consume(1));
@@ -19,7 +19,7 @@ int main(int arv, char *argv[]) {
   }
 
   {
-    TokenBucket tb(350, 1050);
+    TokenBucket<> tb(350, 1050);
 
     assert(!tb.consume(1051));
   }
